@@ -141,12 +141,7 @@ WHERE
     ShipCountry = 'Canada';
 
 --19. list of all orders with order total > 200
-SELECT 
-    *
-FROM 
-    Orders
-WHERE 
-    OrderTotal > 200;
+SELECT * FROM Orders WHERE OrderTotal > 200;
 
 --20. List of countries and sales made in each country
 SELECT 
