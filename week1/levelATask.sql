@@ -117,19 +117,10 @@ GROUP BY
 SELECT 
     SalesOrderID AS OrderID,
     SUM(OrderQty) AS TotalQuantity
-FROM 
-    SalesOrderDetail
-GROUP BY 
-    SalesOrderID
-HAVING 
-    SUM(OrderQty) > 300;
+FROM SalesOrderDetail GROUP BY SalesOrderID HAVING SUM(OrderQty) > 300;
 
 --17. list of all orders placed on or after 1996/12/31
-SELECT 
-    *
-FROM 
-   SalesLT.SalesOrderHeader
-WHERE 
+SELECT * FROM SalesLT.SalesOrderHeader WHERE 
      SalesLT.SalesOrderHeader.OrderDate >= '1996-12-31';
 
 --18. list of all orders shipped to Canada
