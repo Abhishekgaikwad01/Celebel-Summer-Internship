@@ -124,24 +124,13 @@ SELECT * FROM SalesLT.SalesOrderHeader WHERE
      SalesLT.SalesOrderHeader.OrderDate >= '1996-12-31';
 
 --18. list of all orders shipped to Canada
-SELECT 
-    *
-FROM 
-    Orders
-WHERE 
-    ShipCountry = 'Canada';
+SELECT * FROM Orders WHERE ShipCountry = 'Canada';
 
 --19. list of all orders with order total > 200
 SELECT * FROM Orders WHERE OrderTotal > 200;
 
 --20. List of countries and sales made in each country
-SELECT 
-    ShipCountry,
-    SUM(OrderTotal) AS TotalSales
-FROM 
-    Orders
-GROUP BY 
-    ShipCountry;
+SELECT ShipCountry, SUM(OrderTotal) AS TotalSales FROM Orders GROUP BY ShipCountry;
 
 --21. List of Customer ContactName and number of orders they placed
 SELECT 
