@@ -11,7 +11,6 @@ without making any changes to the database. Print a message if the quantity in s
 
 */
 
-
 CREATE PROCEDURE InsertOrderDetails
     @OrderID INT,
     @ProductID INT,
@@ -165,9 +164,9 @@ END;
 GO
 
 
-
 --To drop the existing procedure named UpdateOrderDetails, you can use the DROP PROCEDURE statement.
 DROP PROCEDURE IF EXISTS UpdateOrderDetails;
+
 
 
 
@@ -175,9 +174,7 @@ DROP PROCEDURE IF EXISTS UpdateOrderDetails;
 Create a procedure GetOrderDetails that takes OrderID as input parameter and returns all the records for that OrderID. 
 If no records are found in Order Details table, then it should print the line: "The OrderID XXXX does not exits", 
 where XXX should be the OrderID entered by user and the procedure should RETURN the value 1
-
 */
-
 CREATE PROCEDURE GetOrderDetails
     @OrderID INT
 AS
@@ -198,10 +195,8 @@ BEGIN
     WHERE SalesOrderID = @OrderID;
 END;
 
-
 --You can execute this procedure by providing the OrderID parameter value
 EXEC GetOrderDetails @OrderID = 123; -- Replace 123 with the actual OrderID you want to retrieve
-
 
 --To drop the existing GetOrderDetails procedure, you can use the DROP PROCEDURE statement. 
 DROP PROCEDURE IF EXISTS GetOrderDetails;
