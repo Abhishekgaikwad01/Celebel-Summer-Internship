@@ -8,7 +8,6 @@ If no Discount is given, then use a discount of (0).
 Adjust the quantity in stock (UnitsInStock) for the product by subtracting the quantity sold from inventory.
 However, if there is not enough of a product in stock, then abort the stored procedure.
 without making any changes to the database. Print a message if the quantity in stock of a product drops below its Reorder Level as a result of the update.
-
 */
 
 CREATE PROCEDURE InsertOrderDetails
@@ -393,7 +392,6 @@ This trigger will operate on the Order Details table. If sufficient stock exists
 column in Products. If insufficient stock exists, then refuse the order (ie. do not insert it) and notify the user that the order could not be filled 
 because of insufficient stock.
 */
-
 CREATE TRIGGER tr_CheckStockOnOrder
 ON [Order Details]
 INSTEAD OF INSERT
