@@ -24,6 +24,7 @@ BEGIN
     DECLARE @CurrentStock INT;
     DECLARE @ReorderLevel INT;
 
+
     -- Get the UnitPrice from the Product table if not provided
     IF @UnitPrice IS NULL
     BEGIN
