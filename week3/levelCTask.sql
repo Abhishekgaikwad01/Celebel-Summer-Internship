@@ -121,4 +121,3 @@ BEGIN
 
             -- Set subject_allotted flag
             SET subject_allotted = 1;
-       
