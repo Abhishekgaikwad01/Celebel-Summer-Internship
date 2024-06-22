@@ -14,6 +14,8 @@ CREATE TABLE StudentDetails (
     Section VARCHAR(10)
 );
 
+
+
 -- Insert sample data into StudentDetails
 INSERT INTO StudentDetails (StudentId, StudentName, GPA, Branch, Section) VALUES
 ('159103036', 'Mohit Agarwal', 8.9, 'CCE', 'A'),
@@ -65,6 +67,7 @@ CREATE TABLE Allotments (
     FOREIGN KEY (SubjectId) REFERENCES SubjectDetails(SubjectId),
     FOREIGN KEY (StudentId) REFERENCES StudentDetails(StudentId)
 );
+
 
 -- Create UnallotedStudents table
 CREATE TABLE UnallotedStudents (
