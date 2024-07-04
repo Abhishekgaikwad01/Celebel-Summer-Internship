@@ -92,6 +92,8 @@ BEGIN
         FROM StudentPreference sp
         ORDER BY sp.StudentId, sp.Preference;
 
+
+
     -- Error handling
     DECLARE CONTINUE HANDLER FOR NOT FOUND SET done = 1;
 
