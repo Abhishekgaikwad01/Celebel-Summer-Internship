@@ -22,6 +22,8 @@ CREATE TABLE StudentDetails (
 
 
 
+
+
 -- Insert sample data into StudentDetails
 INSERT INTO StudentDetails (StudentId, StudentName, GPA, Branch, Section) VALUES
 ('159103036', 'Mohit Agarwal', 8.9, 'CCE', 'A'),
